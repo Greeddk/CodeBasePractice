@@ -12,17 +12,14 @@ class HomeViewController: UIViewController {
     
     let nicknameLabel = UILabel()
     let posterImage = UIImageView()
+    let posterBackView = UIImageView()
     let playButton = UIButton()
     let likeButton = UIButton()
     
     let hotContentLabel = UILabel()
-    lazy var contentCollectionView = UICollectionView(frame: CGRect(x: 10, y: 550, width: 360, height: 200), collectionViewLayout: collectionViewLayout())
-    
-    func collectionViewLayout() -> UICollectionViewFlowLayout {
-        
-        let layout = UICollectionViewFlowLayout()
-        return layout
-    }
+    let oneHotContentImage = UIImageView()
+    let twoHotContentImage = UIImageView()
+    let threeHotContentImage = UIImageView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +29,6 @@ class HomeViewController: UIViewController {
         configureHierarchy()
         configureView()
         setupConstraints()
-        
     }
 
 }
@@ -42,10 +38,13 @@ extension HomeViewController: CodeBaseProtocol {
     func configureHierarchy() {
         view.addSubview(nicknameLabel)
         view.addSubview(posterImage)
+        view.addSubview(posterBackView)
         view.addSubview(playButton)
         view.addSubview(likeButton)
         view.addSubview(hotContentLabel)
-        view.addSubview(contentCollectionView)
+        view.addSubview(oneHotContentImage)
+        view.addSubview(twoHotContentImage)
+        view.addSubview(threeHotContentImage)
     }
     
     func configureView() {
@@ -58,6 +57,8 @@ extension HomeViewController: CodeBaseProtocol {
         posterImage.clipsToBounds = true
         posterImage.layer.cornerRadius = 20
         posterImage.contentMode = .scaleAspectFill
+        
+        posterBackView.image = .background
         
         playButton.backgroundColor = .white
         playButton.setTitle("재생", for: .normal)
@@ -76,6 +77,18 @@ extension HomeViewController: CodeBaseProtocol {
         hotContentLabel.textColor = .white
         hotContentLabel.text = "지금 뜨는 콘텐츠"
         hotContentLabel.font = .boldSystemFont(ofSize: 18)
+        
+        oneHotContentImage.image = ._3
+        oneHotContentImage.clipsToBounds = true
+        oneHotContentImage.layer.cornerRadius = 8
+        
+        twoHotContentImage.image = .밀수
+        twoHotContentImage.clipsToBounds = true
+        twoHotContentImage.layer.cornerRadius = 8
+        
+        threeHotContentImage.image = .서울의봄
+        threeHotContentImage.clipsToBounds = true
+        threeHotContentImage.layer.cornerRadius = 8
     }
     
     func setupConstraints() {
@@ -85,10 +98,15 @@ extension HomeViewController: CodeBaseProtocol {
         }
         
         posterImage.snp.makeConstraints { make in
-            make.width.equalTo(view).inset(16)
+            make.width.equalTo(view).inset(8)
             make.height.equalTo(UIScreen.main.bounds.height / 2)
             make.centerX.equalTo(view)
             make.top.equalTo(nicknameLabel).offset(32)
+        }
+        
+        posterBackView.snp.makeConstraints { make in
+            make.edges.equalTo(posterImage)
+            make.size.equalTo(posterImage)
         }
         
         playButton.snp.makeConstraints { make in
@@ -107,7 +125,29 @@ extension HomeViewController: CodeBaseProtocol {
         
         hotContentLabel.snp.makeConstraints { make in
             make.top.equalTo(posterImage.snp.bottom).offset(8)
-            make.leading.equalTo(8)
+            make.leading.equalTo(10)
+            make.height.equalTo(20)
+        }
+        
+        oneHotContentImage.snp.makeConstraints { make in
+            make.top.equalTo(hotContentLabel.snp.bottom).offset(8)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-8)
+            make.leading.equalTo(posterImage.snp.leading)
+            make.width.equalTo(UIScreen.main.bounds.width / 3 - 10)
+        }
+        
+        twoHotContentImage.snp.makeConstraints { make in
+            make.top.equalTo(oneHotContentImage.snp.top)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-8)
+            make.leading.equalTo(oneHotContentImage.snp.trailing).offset(10)
+            make.width.equalTo(UIScreen.main.bounds.width / 3 - 10)
+        }
+        
+        threeHotContentImage.snp.makeConstraints { make in
+            make.top.equalTo(oneHotContentImage.snp.top)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-8)
+            make.leading.equalTo(twoHotContentImage.snp.trailing).offset(10)
+            make.width.equalTo(UIScreen.main.bounds.width / 3 - 10)
         }
         
     }
