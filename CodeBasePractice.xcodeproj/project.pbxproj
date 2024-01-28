@@ -20,6 +20,10 @@
 		42826ABD2B638861004CC8F3 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 42826ABC2B638861004CC8F3 /* SnapKit-Dynamic */; };
 		42826ABF2B638A2D004CC8F3 /* CodeBaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42826ABE2B638A2D004CC8F3 /* CodeBaseProtocol.swift */; };
 		42826AC12B639278004CC8F3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42826AC02B639278004CC8F3 /* UIColor+Extension.swift */; };
+		42826AC32B6632AA004CC8F3 /* ShoppingSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42826AC22B6632AA004CC8F3 /* ShoppingSearchViewController.swift */; };
+		42826AC52B66346E004CC8F3 /* ShoppingTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42826AC42B66346E004CC8F3 /* ShoppingTabBarViewController.swift */; };
+		42826AC72B66351E004CC8F3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42826AC62B66351E004CC8F3 /* SettingViewController.swift */; };
+		42826AC92B6637C9004CC8F3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42826AC82B6637C9004CC8F3 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		42826AB72B6383C5004CC8F3 /* ContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentsViewController.swift; sourceTree = "<group>"; };
 		42826ABE2B638A2D004CC8F3 /* CodeBaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBaseProtocol.swift; sourceTree = "<group>"; };
 		42826AC02B639278004CC8F3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		42826AC22B6632AA004CC8F3 /* ShoppingSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingSearchViewController.swift; sourceTree = "<group>"; };
+		42826AC42B66346E004CC8F3 /* ShoppingTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingTabBarViewController.swift; sourceTree = "<group>"; };
+		42826AC62B66351E004CC8F3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		42826AC82B6637C9004CC8F3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +86,12 @@
 				42826AB32B6383B7004CC8F3 /* HomeViewController.swift */,
 				42826AB52B6383BE004CC8F3 /* SearchViewController.swift */,
 				42826AB72B6383C5004CC8F3 /* ContentsViewController.swift */,
-				42826AA52B6381E5004CC8F3 /* Main.storyboard */,
+				42826AC42B66346E004CC8F3 /* ShoppingTabBarViewController.swift */,
+				42826AC22B6632AA004CC8F3 /* ShoppingSearchViewController.swift */,
+				42826AC82B6637C9004CC8F3 /* CustomTableViewCell.swift */,
+				42826AC62B66351E004CC8F3 /* SettingViewController.swift */,
 				42826AA82B6381E6004CC8F3 /* Assets.xcassets */,
+				42826AA52B6381E5004CC8F3 /* Main.storyboard */,
 				42826AAA2B6381E6004CC8F3 /* LaunchScreen.storyboard */,
 				42826AAD2B6381E6004CC8F3 /* Info.plist */,
 			);
@@ -164,9 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42826AC52B66346E004CC8F3 /* ShoppingTabBarViewController.swift in Sources */,
+				42826AC72B66351E004CC8F3 /* SettingViewController.swift in Sources */,
 				42826AB62B6383BE004CC8F3 /* SearchViewController.swift in Sources */,
+				42826AC32B6632AA004CC8F3 /* ShoppingSearchViewController.swift in Sources */,
 				42826AA42B6381E5004CC8F3 /* MainTabBarViewController.swift in Sources */,
 				42826AB82B6383C5004CC8F3 /* ContentsViewController.swift in Sources */,
+				42826AC92B6637C9004CC8F3 /* CustomTableViewCell.swift in Sources */,
 				42826AA02B6381E5004CC8F3 /* AppDelegate.swift in Sources */,
 				42826ABF2B638A2D004CC8F3 /* CodeBaseProtocol.swift in Sources */,
 				42826AA22B6381E5004CC8F3 /* SceneDelegate.swift in Sources */,

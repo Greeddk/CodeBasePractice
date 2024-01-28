@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: scene)
         
-        window?.rootViewController = MainTabBarViewController()
+        window?.rootViewController = ShoppingTabBarViewController()
         window?.makeKeyAndVisible()
     }
 
