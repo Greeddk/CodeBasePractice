@@ -46,7 +46,7 @@ extension SearchViewController: CodeBaseProtocol {
         naviTitle.text = "NEW & HOT 검색"
         naviTitle.textColor = .white
         naviTitle.textAlignment = .center
-        naviTitle.font = .boldSystemFont(ofSize: 20)
+        naviTitle.font = .boldSystemFont(ofSize: 22)
         
         searchBar.placeholder = "게임, 시리즈, 영화를 검색하세요..."
         
@@ -85,7 +85,7 @@ extension SearchViewController: CodeBaseProtocol {
     
     func setupConstraints() {
         naviTitle.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide)
+            make.top.equalTo(50)
             make.width.equalToSuperview()
             make.height.equalTo(22)
         }

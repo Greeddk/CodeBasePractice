@@ -93,7 +93,7 @@ extension HomeViewController: CodeBaseProtocol {
     
     func setupConstraints() {
         nicknameLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(55)
+            make.top.equalToSuperview().offset(50)
             make.horizontalEdges.equalTo(view.safeAreaLayoutGuide)
         }
         
